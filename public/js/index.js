@@ -18,7 +18,7 @@ searchForm.addEventListener('submit', (event) => {
 })
 
 const fetchWeather = (searchQuery) => {
-  fetch(`http://localhost:9998/weather?address=${searchQuery}`)
+  fetch(`/weather?address=${searchQuery}`)
     .then(response => response.json())
     .then(data => {
       if (data.error) {

@@ -2,6 +2,9 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 
+// PORT FOR HEROKU
+const port = process.env.PORT || 9998
+
 const geocode = require('./utils/geocode')
 const weather = require('./utils/weather')
 
@@ -68,6 +71,6 @@ app.get('*', (req, res) => {
   })
 })
 
-app.listen(9998, () => {
-  console.log('Server running on 9998')
+app.listen(port, () => {
+  console.log(`Server running on ${port}`)
 })
