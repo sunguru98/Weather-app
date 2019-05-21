@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="/img/sun.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>{{title}}</title>
+</head>
+
+<body>
+  {{>header}}
+  <h1 style="text-align: left">{{message}}</h1>
+  <p style="font-weight: 500; text-align: left; font-size: 18px">View your awesome weather here</p>
+  <p style="text-align: left; line-height: 2.0" class="error-message"></p>
+  <form id="searchForm">
+    <input type="text" name="search" id="searchQuery" placeholder="Address" autofocus>
+    <input type="submit" value="Fetch Weather">
+  </form>
+  <div class="forecast-details">
+    <p style="text-align: left; margin-top: 50px">Forecast : <span class="details forecast"></span></p>
+    <p style="text-align: left; margin-top: 20px">Location : <span class="details location"></span></p>
+  </div>
+  {{>footer}}
+  <script src="/js/index.js"></script>
+</body>
+
+</html>
